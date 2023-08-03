@@ -13,4 +13,4 @@ MONGO_DB_URI = getenv("MONGO_DB_URI")
 
 OWNER_ID = int(getenv("OWNER_ID", 1345594412))
 SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/SiArabSupport")
-BOT_USERNAME = gatenv("BOT_USERNAME", "BabuArabRobot")
+BOT_USERNAME = getenv("BOT_USERNAME", "BabuArabRobot")
