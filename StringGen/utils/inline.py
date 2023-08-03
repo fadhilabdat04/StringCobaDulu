@@ -1,6 +1,6 @@
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from config import SUPPORT_CHAT, BOT_USERNAME
+from config import SUPPORT_CHAT
 
 
 keyboard = InlineKeyboardMarkup(
@@ -17,12 +17,6 @@ keyboard = InlineKeyboardMarkup(
             InlineKeyboardButton(
                 text="💰 Donasi", url="https://telegra.ph//file/f7f455a01060b767d4781.jpg"
             ),
-        ],
-         [
-            InlineKeyboardButton(
-                text="➕ Tambahkan Saya Menjadi Di GC Ampas-mu ➕",
-                url=f"http://t.me/{BOT_USERNAME}?startgroup=new",
-            )
         ],
     ]
 )
