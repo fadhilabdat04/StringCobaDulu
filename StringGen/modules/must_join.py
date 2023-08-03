@@ -1,8 +1,9 @@
 from config import MUST_JOIN
-from pyrogram import Anony, filters
+from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 from pyrogram.errors import ChatAdminRequired, UserNotParticipant, ChatWriteForbidden
 
+from StringGen import Anony
 
 @Anony.on_message(filters.incoming & filters.private, group=-1)
 async def must_join_channel(bot: Anony, msg: Message):
