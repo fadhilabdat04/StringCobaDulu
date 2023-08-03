@@ -15,7 +15,7 @@ keyboard = InlineKeyboardMarkup(
     ]
 )
   [
-            InlineKeyboardButton(text="🥷🏻 Pemilik Bot", url="https://t.me/Arabnihnge),
+            InlineKeyboardButton(text="🥷🏻 Pemilik Bot", url="https://t.me/Arabnihnge"),
             InlineKeyboardButton(
                 text="💰 Donasi", url="https://telegra.ph//file/f7f455a01060b767d4781.jpg"
             ),
