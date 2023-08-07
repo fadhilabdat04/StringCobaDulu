@@ -9,11 +9,11 @@ keyboard = InlineKeyboardMarkup(
         [
             InlineKeyboardButton(text="Support", url=SUPPORT_CHAT),
             InlineKeyboardButton(
-                text="🚀 Jasa Si Arab", url="https://t.me/SiArab_Store"
+                text="🚀 Jasa Si Arab", url="https://t.me/JasaSiArab"
             ),
         ],
         [
-            InlineKeyboardButton(text="🥷🏻 Pemilik Bot", url="https://t.me/Arabnihnge"),
+            InlineKeyboardButton(text="🥷🏻 Pemilik Bot", url="https://t.me/Dhilnihnge"),
             InlineKeyboardButton(
                 text="💰 Donasi", url="https://telegra.ph//file/f7f455a01060b767d4781.jpg"
             ),
