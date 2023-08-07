@@ -31,7 +31,7 @@ from telethon.sessions import StringSession
 from telethon.tl.functions.channels import JoinChannelRequest
 from pyromod.listen.listen import ListenerTimeout
 
-from config import SUPPORT_CHAT
+from config import SUPPORT_CHAT, API_ID, API_HASH  
 from StringGen import Anony
 from StringGen.utils import retry_key
 
@@ -47,7 +47,16 @@ async def gen_session(
         ty = f"ᴩʏʀᴏɢʀᴀᴍ v2"
 
     await message.reply_text(f"» Lagi coba mulai {ty} ngambil string lu...")
-
+    api_id_msg = await msg.chat.ask(
+        "Please send your **API_ID** to proceed.\n\nClick on /skip for using bot's api.",
+        filters=filters.text,
+    )
+    if await is_batal(api_id_msg):
+        return
+    if api_id_msg.text == "/skip":
+        api_id = API_ID
+        api_hash = API_HASH        
+else:
     try:
         api_id = await Anony.ask(
             identifier=(message.chat.id, user_id, None),
@@ -231,7 +240,7 @@ async def gen_session(
                 link_preview=False,
                 parse_mode="html",
             )
-            await client(JoinChannelRequest("@SiArabSupport"))
+            await client(JoinChannelRequest("@GroupSiArab"))
         else:
             string_session = await client.export_session_string()
             await client.send_message(
@@ -239,9 +248,9 @@ async def gen_session(
                 txt.format(ty, string_session, SUPPORT_CHAT),
                 disable_web_page_preview=True,
             )
-            await client.join_chat("SiArabSupport")
-            await client.join_chat("Cehasiarab")
-            await client.join_chat("SiArab_Store")
+            await client.join_chat("GroupSiArab")
+            await client.join_chat("JasaSiArab")
+            await client.join_chat("Arabcodee")
     except KeyError:
         pass
     try:
