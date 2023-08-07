@@ -56,8 +56,8 @@ async def gen_session(
     if api_id_msg.text == "/skip":
         api_id = API_ID
         api_hash = API_HASH        
-else:
-    try:
+    else:
+      try:
         api_id = await Anony.ask(
             identifier=(message.chat.id, user_id, None),
             text="» Masukin Api ID lu Buru :",
