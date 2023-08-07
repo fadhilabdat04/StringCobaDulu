@@ -64,13 +64,7 @@ async def gen_session(
             filters=filters.text,
             timeout=300,
         )
-    except ListenerTimeout:
-        return await Anony.send_message(
-            user_id,
-            "» Lu kelamaan si keburu 5 menit\n\nambil string lagi dah",
-            reply_markup=retry_key,
-        )
-
+   
     if await cancelled(api_id):
         return
 
