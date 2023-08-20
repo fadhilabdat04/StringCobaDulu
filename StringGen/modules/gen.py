@@ -47,16 +47,7 @@ async def gen_session(
         ty = f"ᴩʏʀᴏɢʀᴀᴍ v2"
 
     await message.reply_text(f"» Lagi coba mulai {ty} ngambil string lu...")
-    api_id_msg = await msg.chat.ask(
-        "Please send your **API_ID** to proceed.\n\nClick on /skip for using bot's api.",
-        filters=filters.text,
-    )
-    if await is_batal(api_id_msg):
-        return
-    if api_id_msg.text == "/skip":
-        api_id = API_ID
-        api_hash = API_HASH        
-    else:
+    
       try:
         api_id = await Anony.ask(
             identifier=(message.chat.id, user_id, None),
